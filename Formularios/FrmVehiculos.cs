@@ -82,8 +82,7 @@ namespace ExamenParcial1.Formularios
                                 comboBoxClienteID.SelectedValue = reader["ClienteID"];
                                 textBoxMarca.Text = reader["Marca"].ToString();
                                 textBoxModelo.Text = reader["Modelo"].ToString();
-                                numericUpDownAnio.Value = Convert.ToDecimal(reader["Anio"]);
-                                // Configura textBox para placa aquí...
+                                numericUpDownAnio.Value = Convert.ToDecimal(reader["Anio"]); //texbox añadida... terminado el comando
                             }
                         }
                     }

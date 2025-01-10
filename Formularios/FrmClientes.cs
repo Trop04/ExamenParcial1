@@ -33,7 +33,7 @@ namespace ExamenParcial1.Formularios
 
         private void CargarDatosCliente()
         {
-            string connectionString = "Server=localhost;Database=examen;Trusted_Connection=True;";
+            string connectionString = "Server=localhost;Database=examen;Trusted_Connection=True;"; //no funciona sin trustedconnection
             string query = "SELECT Nombre, Apellido, Telefono, Email, Direccion FROM Clientes WHERE ClienteID = @ClienteID";
 
             try
@@ -73,7 +73,7 @@ namespace ExamenParcial1.Formularios
             {
                 query = "UPDATE Clientes SET Nombre = @Nombre, Apellido = @Apellido, Telefono = @Telefono, " +
                         "Email = @Email, Direccion = @Direccion WHERE ClienteID = @ClienteID";
-            }
+            } //fix
             else
             {
                 query = "INSERT INTO Clientes (Nombre, Apellido, Telefono, Email, Direccion) " +
